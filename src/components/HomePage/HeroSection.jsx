@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto px-48 my-16 flex items-center gap-20">
-      <div className="flex flex-col gap-5 w-1/2 p-4">
+    <div className="my-16 flex flex-col-reverse md:flex-row items-center gap-20">
+      <div className="w-full flex flex-col gap-5 md:w-1/2 p-4">
         <h1 className="text-5xl font-bold ">DISCOVER EXCLUSIVE ANIME NFT</h1>
         <p className="text-gray-700">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -26,18 +26,30 @@ const HeroSection = () => {
             Sell
           </Link>
         </div>
-          </div>
-          <div className="w-1/2 flex border-r-4 border-b-4 border-black">
-              <div className="h-96 w-1/3 border-2 border-black">
-                  <img src="images/hero1.png" alt="hero1" className="w-full h-full bg-cover" />
-              </div>
-              <div className="h-96 w-1/3 border-2 border-black">
-                  <img src="images/hero2.jpeg" alt="hero2" className="w-full h-full bg-cover" />
-              </div>
-              <div className="h-96 w-1/3 border-2 border-black">
-                  <img src="images/hero3.jpeg" alt="hero3" className="w-full h-full bg-cover" />
-              </div>
-          </div>
+      </div>
+      <div className="w-full md:w-1/2 flex border-black gap-1 items-center">
+        <div className="h-72 w-1/3 border-2 shadow-lg shadow-black border-black">
+          <img
+            src="images/hero1.png"
+            alt="hero1"
+            className="w-full h-full bg-cover"
+          />
+        </div>
+        <div className="h-96 w-1/3 border-2 shadow-2xl shadow-black border-black">
+          <img
+            src="images/hero2.jpeg"
+            alt="hero2"
+            className="w-full h-full bg-cover"
+          />
+        </div>
+        <div className="h-72 w-1/3 border-2 shadow-lg shadow-black border-black">
+          <img
+            src="images/hero3.jpeg"
+            alt="hero3"
+            className="w-full h-full bg-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 };

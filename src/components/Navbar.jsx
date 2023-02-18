@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ user }) => {
+const Navbar = () => {
+  const user = {
+    name: "Roshni",
+    image: "images/user.png",
+  };
   return (
-    <nav className="flex items-center justify-between mx-24 my-4">
+    <nav className="flex items-center justify-between px-4 md:px-24 lg:px-24 py-4 shadow sticky top-0 z-50 bg-white">
       <div className="flex items-center gap-2">
         <div className="w-40">
           <img src="/images/title.png" alt="logo" className="w-full h-full" />
