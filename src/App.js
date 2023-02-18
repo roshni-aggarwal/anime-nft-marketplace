@@ -1,25 +1,24 @@
-import './App.css';
-import Navbar from './components/Navbar.js';
-import Marketplace from './components/Marketplace';
-import Profile from './components/Profile';
-import SellNFT from './components/SellNFT';
-import NFTPage from './components/NFTpage';
-import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+
+// components
+import Home from "./pages/Home";
+import Marketplace from "./pages/Marketplace";
+import Dashboard from "./pages/Dashboard";
+import NFT from "./pages/NFT";
+import Studio from "./pages/Studio";
 
 function App() {
   return (
-    <div className="container">
-        <Routes>
-          <Route path="/" element={<Marketplace />}/>
-          <Route path="/nftPage" element={<NFTPage />}/>        
-          <Route path="/profile" element={<Profile />}/>
-          <Route path="/sellNFT" element={<SellNFT />}/>             
-        </Routes>
+    <div className="">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="profile" element={<Dashboard />} />
+        <Route path="market" element={<Marketplace />} />
+        <Route path="collection/:name/" element={<Studio />}>
+          <Route path=":id" element={<NFT />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

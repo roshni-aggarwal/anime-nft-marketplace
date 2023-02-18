@@ -1,20 +1,19 @@
 import Navbar from "./Navbar";
 import axie from "../tile.jpeg";
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from "react-router-dom";
 import MarketplaceJSON from "../Marketplace.json";
 import axios from "axios";
 import { useState } from "react";
 
-export default function NFTPage (props) {
+export default function NFTPage(props) {
+  const [data, updateData] = useState({});
+  const [message, updateMessage] = useState("");
+  const [currAddress, updateCurrAddress] = useState("0x");
 
-const [data, updateData] = useState({});
-const [message, updateMessage] = useState("");
-const [currAddress, updateCurrAddress] = useState("0x");
-
-    return(
-        <div style={{"min-height":"100vh"}}>
-            <Navbar></Navbar>
-            <div className="flex ml-20 mt-20">
+  return (
+    <div style={{ "min-height": "100vh" }}>
+      <Navbar></Navbar>
+      {/* <div className="flex ml-20 mt-20">
                 <img src={data.image} alt="" className="w-2/5" />
                 <div className="text-xl ml-20 space-y-8 text-white shadow-2xl rounded-lg border-2 p-5">
                     <div>
@@ -41,7 +40,7 @@ const [currAddress, updateCurrAddress] = useState("0x");
                     <div className="text-green text-center mt-3">{message}</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    )
+            </div> */}
+    </div>
+  );
 }
