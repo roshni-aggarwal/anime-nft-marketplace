@@ -59,9 +59,9 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-      <div className="">
-        <Tab.Group>
-          <Tab.List>
+      <div className="conatiner mx-auto px-4 md:px-24 lg:px-48 my-10">
+        <Tab.Group className="flex gap-4">
+          <Tab.List className="">
             <Tab>Profile</Tab>
             <Tab>Created</Tab>
             <Tab>Collected</Tab>
