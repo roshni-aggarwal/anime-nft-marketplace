@@ -5,7 +5,7 @@ import { useLocation } from "react-router";
 const Navbar = () => {
   const user = {
     name: "Roshni",
-    image: "images/user.png",
+    image: "/images/user.png",
   };
   const [connected, toggleConnect] = useState(false);
    const location = useLocation();
@@ -51,13 +51,21 @@ const Navbar = () => {
         <div className="flex items-center gap-6">
           <Link
             to={"/"}
-            className="font-medium text-lg text-gray-700 hover:font-bold hover:text-black"
+            className={
+              marketPathName
+                ? `font-medium text-lg text-gray-700 hover:font-bold hover:text-black`
+                : `font-medium text-lg text-black`
+            }
           >
             HOME
           </Link>
           <Link
             to={"/market"}
-            className="font-medium text-lg text-gray-700 hover:font-bold hover:text-black"
+            className={
+              marketPathName
+                ? `font-medium text-lg text-black`
+                : `font-medium text-lg text-gray-700 hover:font-bold hover:text-black`
+            }
           >
             MARKETPLACE
           </Link>

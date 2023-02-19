@@ -16,7 +16,7 @@ function App() {
         <Route path="profile" element={<Dashboard />} />
         <Route path="market" element={<Marketplace />} />
         <Route path="SellNFT" element={<SellNFT />} />
-        <Route path="collection/:name/" element={<Studio />}>
+        <Route path="collection/:name" element={<Studio />}>
           <Route path=":id" element={<NFT />} />
         </Route>
       </Routes>
