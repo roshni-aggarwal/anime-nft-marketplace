@@ -20,7 +20,7 @@ const HeroSection = () => {
             Buy
           </Link>
           <Link
-            to={""}
+            to={"/sellNFT"}
             className="px-4 py-2 border-2 border-r-4 border-b-4 border-black bg-blue-400 font-medium shadow-lg"
           >
             Sell
