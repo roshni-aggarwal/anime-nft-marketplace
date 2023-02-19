@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const StudioCard = ({ studio }) => {
   return (
-    <Link to={`collection/${studio.name}`} className="w-1/3">
+    <Link to={`collection/${studio.name}`}>
       <div className="border-2 border-r-4 border-b-4 border-black">
         <h3 className="bg-lime-200 p-2 px-4 capitalize text-xl font-semibold">
           {studio.name}{" "}

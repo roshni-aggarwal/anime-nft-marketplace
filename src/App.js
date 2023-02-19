@@ -7,7 +7,7 @@ import Marketplace from "./pages/Marketplace";
 import Dashboard from "./pages/Dashboard";
 import NFT from "./pages/NFT";
 import Studio from "./pages/Studio";
-import SellNFT from "./components/SellNFT"
+import SellNFT from "./components/SellNFT";
 function App() {
   return (
     <div className="">
@@ -16,9 +16,8 @@ function App() {
         <Route path="profile" element={<Dashboard />} />
         <Route path="market" element={<Marketplace />} />
         <Route path="SellNFT" element={<SellNFT />} />
-        <Route path="collection/:name" element={<Studio />}>
-          <Route path=":id" element={<NFT />} />
-        </Route>
+        <Route path="collection/:name" element={<Studio />} />
+        <Route path="collection/:name/:id" element={<NFT />} />
       </Routes>
     </div>
   );

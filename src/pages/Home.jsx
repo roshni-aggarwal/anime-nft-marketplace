@@ -62,7 +62,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 md:px-24 lg:px-32">
+      <div className="container mx-auto px-4 md:px-16 lg:px-32">
         <HeroSection />
         <Trending trending={trending} />
         <TopCollection topStudio={topStudio} />
