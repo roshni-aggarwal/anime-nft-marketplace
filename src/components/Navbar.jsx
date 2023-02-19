@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const user = {
     name: "Roshni",
-    image: "images/user.png",
+    image: "/images/user.png",
   };
+
+  const marketPathName = useLocation().pathname.includes("/market");
+
   return (
     <nav className="flex items-center justify-between px-4 md:px-24 lg:px-24 py-4 shadow sticky top-0 z-50 bg-white">
       <div className="flex items-center gap-2">
@@ -15,13 +18,21 @@ const Navbar = () => {
         <div className="flex items-center gap-6">
           <Link
             to={"/"}
-            className="font-medium text-lg text-gray-700 hover:font-bold hover:text-black"
+            className={
+              marketPathName
+                ? `font-medium text-lg text-gray-700 hover:font-bold hover:text-black`
+                : `font-medium text-lg text-black`
+            }
           >
             HOME
           </Link>
           <Link
             to={"/market"}
-            className="font-medium text-lg text-gray-700 hover:font-bold hover:text-black"
+            className={
+              marketPathName
+                ? `font-medium text-lg text-black`
+                : `font-medium text-lg text-gray-700 hover:font-bold hover:text-black`
+            }
           >
             MARKETPLACE
           </Link>
